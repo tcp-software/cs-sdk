@@ -1,0 +1,8 @@
+E:\Elance\CS SDK\Examples\bin\Debug\CS SDK Tester.exe
+E:\Elance\CS SDK\Examples\bin\Debug\CS SDK Tester.pdb
+E:\Elance\CS SDK\Examples\obj\Debug\ResolveAssemblyReference.cache
+E:\Elance\CS SDK\Examples\obj\Debug\CS_SDK_Tester.frmMain.resources
+E:\Elance\CS SDK\Examples\obj\Debug\CS_SDK_Tester.Properties.Resources.resources
+E:\Elance\CS SDK\Examples\obj\Debug\CS SDK Tester.csproj.GenerateResource.Cache
+E:\Elance\CS SDK\Examples\obj\Debug\CS SDK Tester.exe
+E:\Elance\CS SDK\Examples\obj\Debug\CS SDK Tester.pdb
