@@ -3,7 +3,7 @@ ShiftPlanning C# SDK
 
 The [ShiftPlanning API](http://www.shiftplanning.com/api/) allows you to call modules within the ShiftPlanning [employee scheduling software](http://www.shiftplanning.com/) that respond in REST style JSON & XML.
 
-This repository contains the open source Javascript SDK that allows you to utilize the above on your website. Except as otherwise noted, the ShiftPlanning Javascript SDK is licensed under the Apache Licence, Version 2.0 http://www.apache.org/licenses/LICENSE-2.0.html)
+This repository contains the open source C# SDK that allows you to utilize the above API in your applications. Except as otherwise noted, the ShiftPlanning C# SDK is licensed under the Apache Licence, Version 2.0 http://www.apache.org/licenses/LICENSE-2.0.html)
 
 
 Usage
@@ -21,20 +21,20 @@ Logged in vs Logged out:
 	if (shiftPlanning.getLoginStatus())
 	{
 		//LOGGED IN
-		
+
 	}
 	else
 	{
 		//LOGGED OUT
-		
+
 	}
-	
+
 
 To make [API][API] calls:
 
-	// call to update wages of employee 101 
+	// call to update wages of employee 101
 
-	//preparing list of request fields 
+	//preparing list of request fields
 	RequestFields employee_data = new RequestFields();
 	employee_data.Add("id", 101);
 	employee_data.Add("wage", 25);
