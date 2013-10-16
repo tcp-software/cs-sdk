@@ -117,7 +117,15 @@ public class APIResponse
             if (dataNode.Name == "item")
             {
                 i++;
-                itemKey = i.ToString();
+                try
+                {
+     			itemKey = dataNode.Attributes["id"].Value;
+		}
+		catch
+		(Exception noAttr)
+		{
+    			itemKey = i.ToString();
+    		}
             }
             else
             {
