@@ -119,19 +119,23 @@ public class APIResponse
                 i++;
                 try
                 {
-     			itemKey = dataNode.Attributes["id"].Value;
-		}
-		catch
-		(Exception noAttr)
-		{
-    			itemKey = i.ToString();
-    		}
+     			    itemKey = dataNode.Attributes["id"].Value;
+		        }
+		        catch (Exception noAttr)
+		        {
+    			    itemKey = i.ToString();
+    		    }
             }
             else
             {
                 itemKey = dataNode.Name;
             }
-            if (dataNode.ChildNodes.Count <= 1)
+            if (dataNode.ChildNodes.Count < 1)
+            {
+                DataItem item = new DataItem(dataNode.InnerText, null);
+                df.Add(itemKey, item);
+            }
+            else if (dataNode.ChildNodes.Count == 1 && dataNode.FirstChild.HasChildNodes == false)
             {
                 DataItem item = new DataItem(dataNode.InnerText, null);
                 df.Add(itemKey, item);
