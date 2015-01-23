@@ -32,7 +32,7 @@ public class ShiftPlanning
 
     #region Constants
     // constants
-	const string api_endpoint = "http://www.shiftplanning.com/api/";
+	const string api_endpoint = "https://www.shiftplanning.com/api/";
 	const string output_type = "xml";
 
     #endregion 
