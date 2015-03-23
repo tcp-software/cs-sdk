@@ -189,7 +189,7 @@ namespace CS_SDK_Tester
 
                 //call method
                 response = shiftPlanning.getEmployees();
-                for (int i = 1; i <= response.Data.Count; i++)
+                for (int i = 0; i < response.Data.Count; i++)
                 {
                     txtLog.AppendText("\r\n\r\nEmployee Id: " + response.Data[i.ToString()].Item["id"].Value +
                         "\r\nName: " + response.Data[i.ToString()].Item["name"].Value +
@@ -210,7 +210,7 @@ namespace CS_SDK_Tester
             {
                 //get first employee id
                 response = shiftPlanning.getEmployees();
-                int firstEmpId = int.Parse(response.Data["1"].Item["id"].Value);
+                int firstEmpId = int.Parse(response.Data["0"].Item["id"].Value);
 
                 //log
                 txtLog.AppendText("\r\n\r\nMethod: getEmployeeDetails");
@@ -234,7 +234,7 @@ namespace CS_SDK_Tester
             {
                 //get first employee id
                 response = shiftPlanning.getEmployees();
-                int firstEmpId = int.Parse(response.Data["1"].Item["id"].Value);
+                int firstEmpId = int.Parse(response.Data["0"].Item["id"].Value);
 
                 //log
                 txtLog.AppendText("\r\n\r\nMethod: updateEmployee");
@@ -268,7 +268,7 @@ namespace CS_SDK_Tester
                 //create filters
                 //filter_fields.Add("schedule", 35316);
                 response = shiftPlanning.getShifts(filter_fields);
-                for (int i = 1; i <= response.Data.Count; i++)
+                for (int i = 0; i < response.Data.Count; i++)
                 {
                     string msg;
                     msg = "\r\n\r\nShift Id: " + response.Data[i.ToString()].Item["id"].Value +
