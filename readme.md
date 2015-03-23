@@ -45,7 +45,19 @@ To make [API][API] calls:
 		// Success
 	}
 
+####Adding SDK to a new project
 
+If you create a new project, you need to add the following files
+
+* APIRequest.cs
+* APIResponse.cs
+* DataFields.cs
+* RequestFields.cs
+* ShiftPlanning.cs
+
+from ShiftPlanning C# SDK into your project. (Right click on the project, Add, Existing item…, select files, and Add As Link)
+
+With sources imported you will be able to easily debug, add your own methods in ShiftPlanning.cs, or to change existing if you need.
 
 Feedback
 --------
