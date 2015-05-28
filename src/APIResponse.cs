@@ -131,7 +131,7 @@ public class APIResponse
             {
                 itemKey = dataNode.Name;
             }
-            if (dataNode.ChildNodes.Count <= 1)
+            if (dataNode.ChildNodes.Count == 0)
             {
                 DataItem item = new DataItem(dataNode.InnerText, null);
                 df.Add(itemKey, item);
@@ -141,7 +141,7 @@ public class APIResponse
                 DataItem di = new DataItem();
                 DataFields dfs = new DataFields();
                 dfs = NodeToDataFields(dataNode.ChildNodes);
-                di = new DataItem(dataNode.InnerText, dfs);
+                di = new DataItem(dataNode.FirstChild.Value, dfs);
                 df.Add(itemKey, di);
             }
         }

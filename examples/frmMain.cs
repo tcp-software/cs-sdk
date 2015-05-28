@@ -313,7 +313,7 @@ namespace CS_SDK_Tester
                     if (response.Data["employees"].Item != null)
                     {//if employee assigned
                         msg += "\r\n  Employees assigned for this job:";
-                        for (int i = 1; i <= response.Data["employees"].Item.Count; i++)
+                        for (int i = 0; i < response.Data["employees"].Item.Count; i++)
                         {
                             msg += "\r\n   " + i.ToString() + ". " + response.Data["employees"].Item[i.ToString()].Item["name"].Value;
                         }
