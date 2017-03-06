@@ -3,7 +3,7 @@
  * Version: 1.0
  * Written by: Meg Soft
  * Date: 20/Nov/2010
- * http://www.shiftplanning.com/api/
+ * http://www.humanity.com/api/
  */
 
 using System;
@@ -32,7 +32,7 @@ public class ShiftPlanning
 
     #region Constants
     // constants
-	const string api_endpoint = "https://www.shiftplanning.com/api/";
+	const string api_endpoint = "https://www.humanity.com/api/";
 	const string output_type = "xml";
 
     #endregion 

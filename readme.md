@@ -1,7 +1,7 @@
 ShiftPlanning C# SDK
 ================
 
-The [ShiftPlanning API](http://www.shiftplanning.com/api/) allows you to call modules within the ShiftPlanning [employee scheduling software](http://www.shiftplanning.com/) that respond in REST style JSON & XML.
+The [ShiftPlanning API](http://www.humanity.com/api/) allows you to call modules within the ShiftPlanning [employee scheduling software](http://www.humanity.com/) that respond in REST style JSON & XML.
 
 This repository contains the open source C# SDK that allows you to utilize the above API in your applications. Except as otherwise noted, the ShiftPlanning C# SDK is licensed under the Apache Licence, Version 2.0 http://www.apache.org/licenses/LICENSE-2.0.html)
 
