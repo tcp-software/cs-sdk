@@ -1169,6 +1169,89 @@ public class ShiftPlanning
 
     #endregion
 
-    #endregion
+    #region Timeclock Methods
+
+    /// <summary>
+    /// Clock in a single employee using timeclock.clockin
+    /// </summary>
+    /// <param name="id">ShiftPlanning ID of the employee to clock in</param>
+    /// <returns>API response data for timeclock.clockin</returns>
+    public APIResponse clockInEmployee(int id)
+    {
+        RequestFields requestFields = new RequestFields();
+        requestFields.Add("module", "timeclock.clockin");
+        requestFields.Add("method", "GET");
+        requestFields.Add("employee", id);
+        this.setRequest(requestFields);
+        return response;
+    }
+
+    /// <summary>
+    /// Clock out a single employee using timeclock.clockout
+    /// </summary>
+    /// <param name="id">ShiftPlanning ID of the employee to clock out</param>
+    /// <returns>API response data for timeclock.clockout</returns>
+    public APIResponse clockOutEmployee(int id)
+    {
+        RequestFields requestFields = new RequestFields();
+        requestFields.Add("module", "timeclock.clockout");
+        requestFields.Add("method", "GET");
+        requestFields.Add("employee", id);
+        this.setRequest(requestFields);
+        return response;
+    }
+
+    /// <summary>
+    /// Clock out a single employee with comments using timeclock.clockout
+    /// </summary>
+    /// <param name="id">ShiftPlanning ID of the employee to clock out</param>
+    /// <param name="notes">Notes to be saved with the employee's clock out record</param>
+    /// <returns>API response data for timeclock.clockout</returns>
+    public APIResponse clockOutEmployee(int id, string notes)
+    {
+        RequestFields requestFields = new RequestFields();
+        requestFields.Add("module", "timeclock.clockout");
+        requestFields.Add("method", "GET");
+        requestFields.Add("employee", id);
+        requestFields.Add("notes", notes);
+        this.setRequest(requestFields);
+        return response;
+    }
+
+    /// <summary>
+    /// Check the timeclock status of a single employee ("in" or "out") using timeclock.status
+    /// </summary>
+    /// <param name="id">ShiftPlanning ID of the employee for whom to check timeclock status</param>
+    /// <returns>API response data for timeclock.status</returns>
+    public APIResponse getEmployeeClockStatus(int id)
+    {
+        RequestFields requestFields = new RequestFields();
+        requestFields.Add("module", "timeclock.status");
+        requestFields.Add("method", "GET");
+        requestFields.Add("employee", id);
+        this.setRequest(requestFields);
+        return response;
+    }
+
+    #endregion Timeclock Methods
+
+    #region Dashboard Methods
+
+    /// <summary>
+    /// Retrieve the current state of your timeclock, showing all employees clocked in and any scheduled for a shift happening now using dashboard.onnow
+    /// </summary>
+    /// <returns>API response data for dashboard.onnow</returns>
+    public APIResponse getDashBoardOnNow()
+    {
+        RequestFields requestFields = new RequestFields();
+        requestFields.Add("module", "dashboard.onnow");
+        requestFields.Add("method", "GET");
+        this.setRequest(requestFields);
+        return response;
+    }
+
+    #endregion Dashboard Methods
+
+    #endregion Public API Methods
 }
 
